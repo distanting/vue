@@ -1,0 +1,81 @@
+{
+  "code": "0",
+  "message": "操作成功",
+  "errMsg": null,
+  "data": {
+    "categorys": [
+      {
+        "categoryId": 1006024400000018,
+        "categoryName": "全部分类",
+        "pictureUrl": null,
+        "categoryTreeNodeId": 1006024400000019,
+        "children": [
+          {
+            "categoryId": 1006024900000013,
+            "categoryName": "坚果炒货",
+            "pictureUrl": "http://cdn.oudianyun.com/1491458464096_35.23956376438245_d700b3f4-f1d8-48a9-9701-1baa554ee960.jpg",
+            "categoryTreeNodeId": 1006024900000014,
+            "children": null
+          },
+          {
+            "categoryId": 1007024900000031,
+            "categoryName": "肉类即食",
+            "pictureUrl": "http://cdn.oudianyun.com/1491458485117_15.168576549614343_dda451df-0477-4b4e-84bf-2cc73798088a.jpg",
+            "categoryTreeNodeId": 1007024900000032,
+            "children": null
+          },
+          {
+            "categoryId": 1007024900000040,
+            "categoryName": "糕点饼干",
+            "pictureUrl": "http://cdn.oudianyun.com/1491458503409_61.73919439961415_e81932b8-ad0e-46c6-bd59-697dd19337c8.jpg",
+            "categoryTreeNodeId": 1007024900000041,
+            "children": null
+          },
+          {
+            "categoryId": 1008024900000033,
+            "categoryName": "果脯蜜饯",
+            "pictureUrl": "http://cdn.oudianyun.com/1491458520746_14.276544577479111_3bf67d61-1611-4203-acb4-4ace00109bf9.jpg",
+            "categoryTreeNodeId": 1008024900000034,
+            "children": null
+          },
+          {
+            "categoryId": 1006024900000030,
+            "categoryName": "豆菌笋类",
+            "pictureUrl": "http://cdn.oudianyun.com/1491458548735_14.127638990457282_38a9a31e-46b1-4db9-8873-3eec22c52708.jpg",
+            "categoryTreeNodeId": 1006024900000031,
+            "children": null
+          },
+          {
+            "categoryId": 1007024900000048,
+            "categoryName": "糖果果冻",
+            "pictureUrl": "http://cdn.oudianyun.com/1491458569323_64.55714540004278_82951d2b-ed91-471f-b7a6-d56b79892808.jpg",
+            "categoryTreeNodeId": 1007024900000049,
+            "children": null
+          },
+          {
+            "categoryId": 1008024900000041,
+            "categoryName": "粮油饮品",
+            "pictureUrl": "http://cdn.oudianyun.com/1491458882167_89.23293504892773_051e7a21-0ffb-4492-8350-8d3ae8ac51ed.jpg",
+            "categoryTreeNodeId": 1008024900000042,
+            "children": null
+          },
+          {
+            "categoryId": 1006024900000037,
+            "categoryName": "全球尖货",
+            "pictureUrl": "http://cdn.oudianyun.com/1491458657084_54.25009794124931_707a4f9c-7bcc-436a-b40a-195bddf9d9d3.jpg",
+            "categoryTreeNodeId": 1006024900000038,
+            "children": null
+          },
+          {
+            "categoryId": 1008024900000053,
+            "categoryName": "生鲜水果",
+            "pictureUrl": "http://cdn.oudianyun.com/1491459821991_5.993231117268372_cc59399c-f839-44cc-9d53-32d410bbf35e.jpg",
+            "categoryTreeNodeId": 1008024900000054,
+            "children": null
+          }
+        ]
+      }
+    ]
+  },
+  "trace": "82!$1#@18%&10!$,153537,62849116690600840960030"
+}

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+       <title>修改图书</title>
+<script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+<script src="layer/layer.js"></script>
+<style>
+table.gridtable {
+font-family: verdana,arial,sans-serif;
+font-size:11px;
+color:#333333;
+border-width: 1px;
+border-color: #666666;
+border-collapse: collapse;
+}
+table.gridtable th {
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: #666666;
+background-color: #dedede;
+}
+table.gridtable td {
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: #666666;
+background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+    <!-- <form action="/books/edbook" method="POST" target="hidden_frame"> -->
+         <input type="hidden" name="id" value="id">
+           名称：<input type="text" name="name"><br>
+           作者：<input type="text" name="author"><br>
+           册数：<input type="text" name="static"><br>
+           借出数：<input type="text" name="rows"><br>  
+           <input type='button' value="提交" id="bot"></input>
+     <!-- </form> -->
+
+<script>
+$(function(){
+     var data = parent.data;
+     $("input[name='id']").val(data.id.replace(/\b(0+)/gi,""))
+     $("input[name='name']").val(data.name)
+     $("input[name='author']").val(data.author)
+     $("input[name='static']").val(data.static.replace(/\b(0+)/gi,""))
+     $("input[name='rows']").val(data.rows)
+ 
+       $('#bot').click(function(){
+          // layer.msg('成功', {icon: 1});
+          layer.msg('失败', {icon: 2});
+          $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/books/edbook",
+            data: {
+                id: $("input[name='id']").val(),
+                name: $("input[name='name']").val(),
+                author: $("input[name='author']").val(),
+                static: $("input[name='static']").val(),
+                rows: $("input[name='rows']").val(),
+            },
+            success: function (flag) {
+              
+                    layer.msg('修改成功', {icon: 1});
+                },
+    
+            error: function (err) {
+               console.log(err)
+            }
+        })
+       })
+
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+       <title>添加图书</title>
+<script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+<style>
+table.gridtable {
+font-family: verdana,arial,sans-serif;
+font-size:11px;
+color:#333333;
+border-width: 1px;
+border-color: #666666;
+border-collapse: collapse;
+}
+table.gridtable th {
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: #666666;
+background-color: #dedede;
+}
+table.gridtable td {
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: #666666;
+background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+     <form action="/books/book" method="post">
+           名称：<input type="text" name="name" ><br>
+           作者：<input type="text" name="author"><br>
+           <input type='submit' value="提交">
+     </form>
+
+<script>
+
+</script>
+</body>
+</html>

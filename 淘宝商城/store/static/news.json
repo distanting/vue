@@ -1,0 +1,45 @@
+{
+    "code": 0,
+    "message": null,
+    "data": [
+        {
+            "messageType": 1,
+            "unReadMsgCount": 0,
+            "msgTitle": null,
+            "msgContent": null,
+            "coverUrl": null,
+            "h5Url": null,
+            "appUrl": null,
+            "iconUrl": "http://cdn.oudianyun.com/lyf/prod/back-cms/1490860027701_8853_66.png",
+            "latestTime": null,
+            "latestTimeStr": null,
+            "labelName": "系统通知"
+        },
+        {
+            "messageType": 2,
+            "unReadMsgCount": 0,
+            "msgTitle": null,
+            "msgContent": null,
+            "coverUrl": null,
+            "h5Url": null,
+            "appUrl": null,
+            "iconUrl": "http://cdn.oudianyun.com/lyf/prod/back-cms/1490860363647_4752_65.png",
+            "latestTime": null,
+            "latestTimeStr": null,
+            "labelName": "活动消息"
+        },
+        {
+            "messageType": 3,
+            "unReadMsgCount": 0,
+            "msgTitle": null,
+            "msgContent": null,
+            "coverUrl": null,
+            "h5Url": null,
+            "appUrl": null,
+            "iconUrl": "http://cdn.oudianyun.com/lyf/prod/back-cms/1490860389534_6454_82.png",
+            "latestTime": null,
+            "latestTimeStr": null,
+            "labelName": "客服小伊"
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+## 1、根据经纬度获取位置详情
+     
+### 请求URL：
+	http://localhost:3000/position
+
+### 示例：
+[http://localhost:3000/position/40.10038,116.36867](http://localhost:3000/position/40.10038,116.36867)
+
+### 请求方式：
+	GET
+
+### 参数类型：param
+
+	|参数		|是否必选 |类型     |说明
+	|geohash    |Y       |string   |经纬度
+
+### 返回示例：
+
+	{
+      "code": 0,
+      "data": {
+        "address": "北京市昌平区337省道",
+        "city": "北京市",
+        "geohash": "40.10038,116.36867",
+        "latitude": "40.10038",
+        "longitude": "116.36867",
+        "name": "昌平区北七家宏福科技园(337省道北)"
+      }
+    }
+## 2、获取食品分类列表
+
+### 请求URL：
+	http://localhost:3000/index_category
+
+### 请求方式：
+	GET
+
+### 参数类型：
+	无
+
+### 返回示例：
+	{
+	  "code": 0,
+	  data: [
+              {
+                id: 1,
+                is_in_serving: true,
+                description: "0元早餐0起送，每天都有新花样。",
+                title: "预订早餐",
+                link: "",
+                image_url: "/d/49/7757ff22e8ab28e7dfa5f7e2c2692jpeg.jpeg",
+                icon_url: "",
+                title_color: "",
+                __v: 0
+              },
+3、根据经纬度获取商铺列表
+
+### 请求URL：
+	http://localhost:3000/shops
+
+### 示例：
+[http://localhost:3000/shops?latitude=40.10038&longitude=116.36867](http://localhost:3000/shops?latitude=40.10038&longitude=116.36867)
+
+### 请求方式：
+	GET
+
+### 参数类型：query
+	|参数          |是否必选  |类型     |说明|
+	|latitude      |Y        |string   |纬度|
+	|longitude     |Y       |string    |经度|
+ 4、根据经纬度和关键字搜索商铺列表
+
+### 请求URL：
+	http://localhost:3000/search_shops
+	例子: http://localhost:3000/search_shops?keyword=test&geohash=40.10038,116.36867
+	
+### 请求方式：
+    GET
+
+### 参数类型：query
+	|参数          |是否必选  |类型     |说明|
+	|geohash      |Y       |string    |经纬度
+	|keyword      |Y       |string    |关键字
+  

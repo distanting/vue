@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+       <title>借出图书</title>
+<script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+<script src="layer/layer.js"></script>
+<style>
+table.gridtable {
+font-family: verdana,arial,sans-serif;
+font-size:11px;
+color:#333333;
+border-width: 1px;
+border-color: #666666;
+border-collapse: collapse;
+}
+table.gridtable th {
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: #666666;
+background-color: #dedede;
+}
+table.gridtable td {
+border-width: 1px;
+padding: 8px;
+border-style: solid;
+border-color: #666666;
+background-color: #ffffff;
+}
+</style>
+
+</head>
+<body>
+
+       
+           时间：<input type="text" name="lendtime" readonly  unselectable="on"><br>
+
+           姓名：<input type="text" name="name"><br>
+           工号：<input type="text" name="proof"><br>
+           
+
+
+           <input type='button' value="提交" id="bot"></input>
+  
+
+<script>
+    $(function(){
+        var myDate=new Date();
+        function show(){
+        var mydate = new Date();
+          var str = "" + mydate.getFullYear() + "年";
+          str += (mydate.getMonth()+1) + "月";
+          str += mydate.getDate() + "日";
+          return str;
+        }
+
+        var data = parent.data;
+        $("input[name='lendtime']").val(show())
+        $('#bot').click(function(){
+            var nameo=$("input[name='name']").val()
+            var proofo=$("input[name='proof']").val()
+            if(nameo == '' || proofo == ''){
+                layer.msg('不能为空', {icon: 2});
+                
+            }else{  
+           
+            $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/books/edbook",
+            data: {
+                id: data.id,
+                name: data.name,
+                author: data.author,
+                static: data.static-1,
+                rows: data.rows+1,
+            },
+            success: function (flag) {
+               
+                    fn();
+                },
+    
+            error: function (err) {
+               console.log(err)
+            }
+        })
+    } 
+        })
+
+
+
+
+        function fn(){
+            
+            var name=$("input[name='name']").val()
+            var proof=$("input[name='proof']").val()
+            var lendtime = show()
+            var lendbook=data.name
+            var lendbookid=data.id.replace(/\b(0+)/gi,"")
+
+           
+
+            $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/lend/book",
+            data: {
+                name:name,
+                proof:proof,
+                lendtime:lendtime,
+                lendbook:data.name,
+                lendbookid:lendbookid
+            },
+            success: function (flag) {
+                layer.msg('ok', {icon: 1});
+                var index = parent.layer.getFrameIndex(window.name)
+                
+                parent.layer.close(index)
+
+                },
+    
+            error: function (err) {
+                console.log(err)
+            }
+        })
+        }
+     
+    })
+
+</script>
+</body>
+</html>
